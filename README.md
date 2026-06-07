@@ -1,4 +1,4 @@
-# 🗺️ Bonn Shortest Path Finder
+# Bonn Shortest Path Finder
 
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -8,13 +8,13 @@ An efficient routing engine that visualizes the street network of Bonn, Germany,
 
 ![Calculated Route Simulation](path_bonn.png)
 
-## 🚀 Core Features
+## Core Features
 * **Graph Validation (BFS):** Pre-checks the network topology to detect detached road networks (*connected components*) in $O(1)$ time complexity using Python `set` hashing.
 * **Vectorized Dijkstra:** Optimized shortest-path computation utilizing NumPy vectorization (`np.argmin`, `np.where`). Includes an *Early Exit* strategy to handle unperfect real-world GIS data.
 * **Automated Logging:** Serializes the internal graph structure and highlights topology warnings into an auto-generated `graph_structure.txt`.
 * **Visual Mapping:** Dynamic rendering of the entire graph and highlighted route using Matplotlib.
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 * **Python 3** (Object-Oriented Architecture)
 * **NumPy** (Vectorized Array Operations)
 * **Matplotlib** (Graph Rendering & Geometry Plotting)
@@ -23,13 +23,13 @@ An efficient routing engine that visualizes the street network of Bonn, Germany,
 ├── Main.py              # Application Entry Point & Exception Handling
 ├── Search.py            # Graph Algorithms (BFS & Dijkstra)
 ├── Graph.py             # Custom Data Parser (Nodes, Neighbors, Matrices)
-├── path_bonn.png        # Image of a successfull route calculation
+├── path_bonn.png        # Image of a successful route calculation
 ├── graph.txt            # Geospatial Source Data: Edge connections
 ├── xcoords.txt          # Geospatial Source Data: X-Coordinates
 └── ycoords.txt          # Geospatial Source Data: Y-Coordinates
 ```
 
-## 📦 Installation & Usage
+## Installation & Usage
 1. Clone the repository:
 ```bash 
 git clone [https://github.com/m-podolski-projects/bonn-path-finder.git](https://github.com/m-podolski-projects/bonn-path-finder.git)
@@ -46,7 +46,7 @@ pip install numpy matplotlib
 python Main.py
 ```
 
-## 🔍 Engineering Insights: Handling Imperfect GIS Data
+## Engineering Insights: Handling Imperfect GIS Data
 During development, the BFS validation layer revealed that the Bonn dataset contains 156 isolated nodes (detached pedestrian zones, parking geometries, or dead ends).
 
 Standard implementations of Dijkstra's algorithm fail or waste CPU cycles on disconnected graphs. To ensure production-grade robustness, this engine implements an Early Exit constraint:
