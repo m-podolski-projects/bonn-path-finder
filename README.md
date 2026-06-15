@@ -1,7 +1,6 @@
 # Bonn Shortest Path Finder
 
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 ![Dependencies](https://img.shields.io/badge/dependencies-numpy%20%7C%20matplotlib-orange)
 
 An efficient routing engine that visualizes the street network of Bonn, Germany, and computes the shortest path between nodes using a vectorized **Dijkstra's Algorithm** and **Breadth-First Search (BFS)** for graph validation.
